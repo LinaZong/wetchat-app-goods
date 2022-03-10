@@ -1,0 +1,38 @@
+
+.input-name{
+left: 10rpx;
+margin-top: 20rpx;
+width: 80%;
+height: 80rpx;
+border: 1rpx solid #faca82;
+border-radius: 10rpx;
+}
+
+
+.login-btn{
+  background-color: green;
+  color: #faca82;
+  border-radius: 10rpx;
+  width: 100px !important;
+  
+}
+.regist-btn{
+  background-color: blue;
+  color: #faca82;
+  border-radius: 10rpx;
+  width: 100px !important;
+
+
+}
+
+.page{
+  margin-top: 40px;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 45px;
+  display: flex;
+  width: 300px;
+  flex-direction: row; 
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}

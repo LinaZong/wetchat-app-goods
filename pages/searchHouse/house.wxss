@@ -1,0 +1,58 @@
+/* pages/searchHouse/house.wxss */
+
+.input-view{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    background-color: white;
+    width: 90%;
+    height: 90rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 45rpx;
+    z-index: 3;
+   }
+   
+   .input-image{
+       margin-left:20rpx;
+       width: 40rpx;
+       height: 40rpx;  
+   }
+   .input-button{
+       margin-left:10rpx;
+       width: 20%;
+       height: 60%;
+       margin-top: 10rpx;
+       margin-bottom: 10rpx;
+       font-size: 15px;
+       color: #333333;
+   }
+   
+   
+   
+   .input-wire{
+       margin-left:10rpx;
+       width: 2rpx;
+       height: 90%;
+       background-color: gray;
+   }
+   
+   .input-input{
+       margin-left:10rpx;
+       width: 80%;
+       height: 60%;
+       margin-top: 10rpx;
+       margin-bottom: 10rpx;
+       font-size: 14px;
+       color: #666666;
+   }
+   
+   .current-text{
+       margin-top: 30rpx;
+       color: white;
+       font-size: 15px;
+       height: 60rpx;
+       z-index: 4;
+       align-self: center;
+   }

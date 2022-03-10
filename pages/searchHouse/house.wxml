@@ -1,0 +1,25 @@
+<!--pages/searchHouse/house.wxml-->
+<view class="input-view">
+<image class="input-image" src="/images/home/home_search_icon.png"></image>
+<view class="input-button" bindtap="chooseCity">{{city}}</view>
+<view class="input-wire"></view>
+<view class="input-input">
+<input type="text" placeholder="请输入社区名称" bindinput="inputChange" bindconfirm="inputFinish"/>
+</view>
+</view>
+
+<view wx:for="{{dataList}}" style="margin-top: 10px;">
+<view class="card-team-leader-view" bindtap="chooseTeam" data-leader="{{item}}" style="height: 250rpx;" >
+<image class="card-team-leader-icon" src="{{item['headImg']}}"></image>
+<view class="card-team-leader-info">
+<text class="title-text">{{item['communityName']}}</text>
+<text class="gray-text"> 团长 {{item['disUserName']}}</text>
+<text class="title-text">{{item['fullAddress']}}</text>
+<!-- //distance  距离 -->
+</view>
+<view class="card-header-leader-address">
+<text style ='color:red;font-size:12px'>距离{{item['distance']}}</text>
+</view>
+
+</view>
+</view>

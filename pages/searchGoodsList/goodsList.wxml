@@ -1,0 +1,19 @@
+<!--pages/searchGoodsList/goodsList.wxml-->
+<view wx:for="{{goodsList}}">
+<view class="goods-item-view">
+<!-- 商品信息 -->
+<view class="goods-goods">
+  <image class="goods-icon-images" src="/images/home/home_icflag.png"></image>
+  <image class="goods-image" src="{{item['skuImage']}}"></image>
+  <view class="info-view">
+    <text class="goods-text">{{item["spuName"]}}</text> 
+    <view class="price-view">
+      <text class="price-text">{{'￥'+item["actPrice"][0]+ '.0'}}</text> 
+      <button class="tapbtn1" plain="ture" bindtap="addGoodsToCar">
+      <image class="img-button" src="/images/home/home_add.png" mode="aspectFit"></image>
+      </button>
+    </view>
+  </view>
+</view>
+</view>
+</view>

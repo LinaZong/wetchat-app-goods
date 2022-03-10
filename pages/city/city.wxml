@@ -1,0 +1,15 @@
+
+
+
+<view class="col">
+<view wx:for="{{cityList}}" wx:key="index">
+<view class="group-view">
+<view class="header-view">
+<text class="title">{{item['title']}}</text>
+</view>
+<view class="cell-father-view" wx:for="{{item.list}}" wx:key="cell-index" wx:for-item="cellitem"> 
+<view class="cell-view" bindtap="chooseCity" data-city="{{cellitem['name']}}"><text class="cell-title">{{cellitem['name']}}</text></view>
+</view>
+</view>
+</view>
+</view>

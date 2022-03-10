@@ -1,0 +1,41 @@
+<!--pages/cars/cars.wxml-->
+
+<view class="goods-view">
+    <view wx:for="{{carts}}">
+<view class="cars-view">
+<view wx:for="{{item['shopcarts']}}" wx:for-item="carCell">
+<view class="cart-cell">
+<image src="{{carCell['isSeleted'] ? '/images/cars/car_seleted.png' : '/images/cars/car_normal.png'}}" class="cart-seleted-icon" bindtap="seletedClick" data-itemdata="{{carCell}}" ></image>
+<image class="cart-cell-image"  src="{{carCell['imgurl']}}"></image>
+<view class="cart-cell-info">
+<text class="title-text" style=" padding-left: 20rpx;">{{carCell['title']}}</text>
+<view class="cart-cell-info-price">
+<text class="red-text" style="padding-left: 20rpx; font-size: 17px;">￥{{carCell['currntprice']}}</text>
+<image src="/images/cars/car_sub.png" style="width: 50rpx; height: 50rpx; padding-left: 190rpx;"></image>
+<text class="title-text" style="padding-left: 20rpx; font-size: 17px;">{{carCell['can_buy']}}</text>
+<image src="/images/cars/car_add.png" style="width: 50rpx; height: 50rpx; padding-left: 20rpx;"></image>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+
+<!-- 结算view -->
+<view class="price-view" style="position: fixed; bottom: 0;">
+<image style="margin-left: 30rpx; width: 50rpx; height: 50rpx;" src="{{selectAllStatus ? '/images/cars/car_seleted.png' : '/images/cars/car_normal.png'}}" bindtap="seletedAllClick"></image>
+<text class="red-text" style="margin-left: 10rpx;">全选</text>
+<view class="price-price-view">
+<view style="height: 50%; width: 100;">
+<text class="gray-text">合计：</text>
+<text class="red-text" style="font-size: 15px;">￥{{totalPrice}}</text>
+</view>
+<view style="height: 50%; width: 100;">
+<text class="gray-text" style="font-size: 10px;">总额：￥{{totalPrice}}</text>
+</view>
+</view>
+<view style="margin-left: 38rpx; margin-right: 0ch; width: 35%; background-color:red; height: 100%; color:white;  align-items: center; justify-content: center; display: flex; flex-direction: column;">去结算({{totalNum}})</view>
+</view>
+
+

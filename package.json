@@ -1,0 +1,15 @@
+{
+  "name": "lxhighproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apifm-wxapi": "^3.52.0",
+    "crypto-js": "^4.1.1"
+  }
+}

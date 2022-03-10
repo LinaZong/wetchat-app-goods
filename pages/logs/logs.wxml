@@ -1,0 +1,15 @@
+<!--logs.wxml-->
+
+<view class="container">
+<input maxlength="40"	type="text" class="input-name" placeholder="请输入账号" bindinput="nameFinishInput"/>
+<input password="{{ true }}"  maxlength="40" type="number" class="input-name" placeholder="请输入密码" bindinput="passwordFinishInput"/>
+</view>
+
+
+<view class="page">
+<button class="login-btn" bindtap="user_login">登录</button>
+<button class="regist-btn"  bindtap="user_regist">注册</button> 
+</view>
+
+
+

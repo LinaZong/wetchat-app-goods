@@ -1,0 +1,74 @@
+
+<view class="header-view">
+<!-- 透视图 -->
+<view class="header-background-view">
+  <view class="header-title-view" bindtap="gotoUsetLeader">
+    <View class="header-user-view" >
+      <image class="header-user-icon" src="{{userInfo['headImg']}}"></image>
+      <text class="header-user-text">{{userInfo['communityName']}}</text>
+    </View>
+  </view>
+  <image class="header-image" src="/images/home/home_banner.jpg"></image>
+</view>
+<!-- 搜索视图 -->
+<view class="input-view">
+  <image src="/images/home/home_search_icon.png" class="input-search" ></image>
+  <input confirm-type="search" focus="ture"  placeholder="搜索商品" class="input-text" bindinput="inputChange"  bindconfirm="inputFinish"/>
+</view>
+</view>
+
+<tip-seleted bindtipSeletedClick='clickTipChange' itemData="{{itemDataArr}}"></tip-seleted>
+
+<!-- 商品卡片 -->
+<view class="" wx:for="{{goodsList}}">
+<view class="goods-item-view">
+<!-- 商品信息 -->
+<view class="goods-goods">
+  <image class="goods-icon-images" src="/images/home/home_icflag.png"></image>
+  <image class="goods-image" src="{{item['skuImage']}}"></image>
+  <view class="info-view">
+    <text class="goods-text">{{item["spuName"]}}</text> 
+    <view class="price-view">
+      <text class="price-text">{{'￥'+item["actPrice"][0]+ '.0'}}</text> 
+      <button class="tapbtn1" plain="ture" bindtap="addGoodsToCar" data-goodId="{{item['actId']}}">
+      <image class="img-button" src="/images/home/home_add.png" mode="aspectFit"></image>
+      </button>
+    </view>
+  </view>
+
+</view>
+<!-- 时间信息 -->
+<view class="num-view">
+<!-- 第一个数量 -->
+<view class="number-view1">
+<text class="gray-text">已抢</text>
+<text class="red-text">{{item["soldNum"]}}</text>
+<text class="gray-text">件</text>
+</view>
+
+<view class="number-view2">
+<text class="gray-text">剩余</text>
+<text class="red-text">{{item["spuCanBuyNum"]}}</text>
+<text class="gray-text">件</text>
+</view>
+
+
+<view class="number-view3">
+<text class="gray-text">预计</text>
+<text class="red-text">{{item["pick_up_modify"]}}</text>
+<text class="gray-text">配送</text>
+</view>
+
+</view>
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+

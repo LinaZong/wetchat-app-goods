@@ -1,0 +1,67 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="header-view">
+<image class="image" src="{{pageInfo['common_header_backgroundimage']}}"></image>
+<!-- 透视图 -->
+<view class="header-background-view">
+
+  <view class="header-title-view" bindtap="gotoUsetLeader">
+    <View class="header-user-view" >
+      <image class="header-user-icon" src="{{userInfo['avatar']}}"></image>
+      <text class="header-user-text" style="color: {{pageInfo['user_top_font_color']}};" >{{userInfo['username']}}</text>
+    </View>
+  </view> 
+  <view class="header-image">
+  <view style="width: 100%; height: 90rpx; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+
+  <text class="title-text" style="padding-left: 30rpx;" >我的订单</text>
+  <text class="gray-text"style="padding-right: 30rpx;">查看全部订单 > </text>
+  </view>
+  <view style="width: 100%; height: 1px; background-color: #f6f6f6; margin-top: 3rpx;">
+
+ 
+  </view>
+  <view style="height: 80px; width: 100%; display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
+  <view wx:for="{{itemList}}">
+    <view style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+<image style="width: 50rpx; height: 50rpx;  display: block;" src="{{item['imageUrl']}}" mode='widthFix'></image>
+ <text class="gray-text" style="padding-top: 20rpx;">{{item['title']}}</text>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+<view class="header-image" style="height: 360rpx;">
+  <view style="width: 100%; height: 90rpx; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+
+<text class="title-text" style="padding-left: 30rpx;" >我的当前自提点</text>
+<text class="gray-text"style="padding-right: 30rpx;"> > </text>
+</view>
+<view style="width: 100%; height: 1px; background-color: #f6f6f6; margin-top: 3rpx;"></view>
+<view style="height: 80px; width: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;">
+<text class="red-text" style="padding-left: 30rpx;">{{teamInfo['communityName']}}</text>
+<text class="gray-text" style="padding-left: 30rpx;">{{teamInfo["fullAddress"]}}</text>
+<text class="title-text" style="padding-left: 30rpx;">电话 {{teamInfo["disUserMobile"]}}</text>
+</view>
+</view>
+
+
+<view class="header-image" style="height: 360rpx;">
+<view wx:for="{{cellList}}">
+<view style="border-bottom: 1px solid #f6f6f6; width: 100%; height: 90rpx; display: flex; flex-direction: row; justify-content: space-between;align-items: center;">
+<view style="display: flex; flex-direction: row; justify-content: space-between;align-items: center;">
+  <image style="width: 50rpx; height: 50rpx; padding-left: 30rpx;" src="{{item['imageUrl']}}"></image>
+<text class="title-text" style="margin-left:20rpx;">{{item['title']}}</text>
+</view>
+<text class="gray-text" style="margin-right:20rpx;"> > </text>
+</view>
+</view>
+</view>
+
+<view style="padding-top:20rpx;width: 100%; height: 100rpx; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+<text class="gray-text">{{pageInfo['data']}}</text>
+
+</view>
+</view>
+

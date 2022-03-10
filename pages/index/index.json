@@ -1,0 +1,5 @@
+{
+  "usingComponents": {"tip-seleted":"/componets/tip_seleted/tip-seleted"},
+  "navigationBarTitleText": "团购",
+  "navigationBarBackgroundColor": "#FFD700"
+}

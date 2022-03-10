@@ -1,0 +1,18 @@
+<!--componets/tip_seleted/tip-seleted.wxml-->
+<view class="father-view">
+    <view wx:for="{{itemData}}" class="sub-father-view"> 
+  <view wx:if="{{index==0}}" class="item-button-view{{item1Active ? '-seleted':''}}" id="{{item.id}}" bindtap="changeTip"  data-link="{{item.link}}">
+        <image class="item-button-icon" src="{{item.thumb}}"></image>
+        <text class="item-button-text">{{item.navname}}</text>
+    </view>
+    
+    <view wx:if="{{index==1}}" class="item-button-view{{item2Active ? '-seleted':''}}" id="{{item.id}}" bindtap="changeTip" data-link="{{item.link}}">
+        <image class="item-button-icon" src="{{item.thumb}}"></image>
+        <text class="item-button-text">{{item.navname}}</text>
+    </view>
+    <view wx:if="{{index==2}}" class="item-button-view{{item3Active ? '-seleted':''}}" id="{{item.id}}" bindtap="changeTip" data-link="{{item.link}}">
+        <image class="item-button-icon" src="{{item.thumb}}"></image>
+        <text class="item-button-text">{{item.navname}}</text>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/teamLeader/leader.wxml-->
+<view class="header-view">
+<image src="/images/leader/leader_banner.png" class="header-image"></image>
+<view class="input-view">
+<image class="input-image" src="/images/home/home_search_icon.png"></image>
+<view class="input-button" bindtap="chooseCity">{{city}}</view>
+<view class="input-wire"></view>
+<view class="input-input" bindtap="chooseHouse" data-city="{{city}}">{{team}}</view>
+</view>
+<view class="current-text">当前社区</view>
+<view class="card-view">
+<image class="card-header-icon" src="{{userInfo['disUserHeadImg']}}"></image>
+<view class="card-header-view">
+<text class="card-header-leader-text"> 团长 + {{userInfo['disUserName']}}</text>
+<text class="card-header-address-text">{{userInfo['communityName']}}</text>
+<text class="card-header-get-text">{{userInfo['fullAddress']}}</text>
+</view>
+</view>
+</view>
+<view wx:for="{{nearList}}">
+<view class="card-team-leader-view" bindtap="chooseTeam" data-leader="{{item}}">
+<image class="card-team-leader-icon" src="{{item['headImg']}}"></image>
+
+<view class="card-team-leader-info">
+<text class="gray-text">{{item['communityName']}}</text>
+<text class="gray-text"> 团长+{{item['disUserName']}}</text>
+
+<!-- //distance  距离 -->
+</view>
+<view class="card-header-leader-address">
+<text style ='color:red;font-size:12px'>距离{{item['distance']}}</text>
+</view>
+
+</view>
+</view>

@@ -1,0 +1,52 @@
+/* componets/tip_seleted/tip-seleted.wxss */
+@import "../../app.wxss";
+
+.father-view{
+padding-top: 30rpx;
+height: 80rpx;
+display: flex;
+flex-direction: row; 
+align-items: center;
+justify-content: space-evenly;
+
+}
+
+.sub-father-view{
+ height: 100%;
+ width: 28%;
+ 
+}
+
+.item-button-view-seleted{
+    height: 100%;
+display: flex;
+width: 100%;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+background-color: white;
+border-radius: 20rpx;
+border: 3rpx solid  red;
+}
+
+.item-button-view{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20rpx;
+    border: 3rpx solid white;
+    }
+
+.item-button-icon{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.item-button-text{
+    font-size: 30rpx;
+    color: #666666;
+}

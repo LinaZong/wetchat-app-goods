@@ -1,0 +1,57 @@
+/* pages/city/city.wxss */
+
+
+.col{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+}
+.group-view{
+display: flex;
+flex-direction: column;
+width: 100%;
+flex-direction: column;
+justify-content: center;  
+}
+
+.header-view{
+background-color: #F5F5F5;
+height: 100rpx;
+width: 100%; 
+flex-direction: column;
+justify-content: center;  
+
+}
+
+
+.title{
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    color: #666666;
+    font-size: 13px;
+    height: 100%;
+}
+
+.cell-father-view{
+    background-color:white;
+    width: 100%;
+    }
+
+.cell-view{
+    background-color:white;
+    height: 100rpx;
+    width: 100%;   
+    display: flex;
+  flex-direction: column;
+   justify-content: center; 
+ 
+    }
+     
+
+.cell-title{
+        margin-left: 30rpx;
+        color: #333333;
+        font-size: 15px;
+    }
